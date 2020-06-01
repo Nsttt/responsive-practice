@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Responsive design practice</title>
+
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+        <link 
+            href="https://fonts.googleapis.com/css?family=Righteous"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="verde">
+                <h1>Responsive</h1>
+                <nav>
+                    <div class="icon"><i class="fa fa-bars"></i></div>
+                    <div class="menu_item">HOME</div>
+                    <div class="menu_item">WHO WE ARE</div>
+                    <div class="menu_item">CONTACT</div>
+                </nav>
+            </header>
+            <main>
+                <section class="main_text">
+                    <div>
+                        <h3>PRACTICE PROJECT</h3>
+                        <h1 class="verde">RESPONSIVE DESIGN</h1>
+                    </div>
+                    <div>
+                        <p>
+                            Web page developed by Néstor López for the "Responsive Design" course on OpenWebinars.
+                        </p>
+                        <p>
+                            It establish two breakpoints, one at 576px and the other one at 992px, where there's a change on the layout display.
+                        </p>
+                        <p>
+                            The development process has been done starting from the design for small screens. 
+                        </p>
+                    </div>
+                </section>
+                <section class="images">
+                    <img src="img/img1.jpg" /> <img src="img/img2.jpg" />
+                    <img src="img/img3.jpg" /> <img src="img/img4.jpg" />
+                    <img src="img/img5.jpg" /> <img src="img/img6.jpg" />
+                    <img src="img/img7.jpg" /> <img class="hidden" src="img/img8.jpg" />
+                    <img src="img/img9.jpg" />
+                </section>
+            </main>
+            <section class="news">
+                <h2 class="verde">NEWS</h2>
+                <article>
+                    <h4>May 1</h4>
+                    <h3 class="verde">New 1</h3>
+                    <p>
+                        Accusantium consectetur, numquam ratione sed ut ipsa earum
+                        consequatur sunt quae officiis facere tempora nobis pariatur
+                        quibusdam non, cum harum. Expedita, doloribus!
+                    </p>
+                </article>
+                <article>
+                    <h4>May 1</h4>
+                    <h3 class="verde">New 2</h3>
+                    <p>
+                        Accusantium consectetur, numquam ratione sed ut ipsa earum
+                        consequatur sunt quae officiis facere tempora nobis pariatur
+                        quibusdam non, cum harum. Expedita, doloribus!
+                    </p>
+                </article>
+                <article>
+                    <h4>May 1</h4>
+                    <h3 class="verde">New 3</h3>
+                    <p>
+                        Accusantium consectetur, numquam ratione sed ut ipsa earum
+                        consequatur sunt quae officiis facere tempora nobis pariatur
+                        quibusdam non, cum harum. Expedita, doloribus!
+                    </p>
+                </article>
+            </section>
+        </div>
+        <script>
+            $(function(){
+                $(".icon").click(function(){
+                    $(".menu_item").toggle();
+                });
+                $(window).resize(function() {
+                    let anchura = $(this).width();
+                    if(anchura > 576) {
+                        $(".menu_item").show();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
